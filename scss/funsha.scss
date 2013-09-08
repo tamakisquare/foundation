@@ -62,7 +62,7 @@ $include-html-funsha-classes: true !default;
 
 @mixin mod-reveal-bg {
     @include reveal-bg;
-    // display: block;
+    display: block;
 
     &.fade {
         opacity: 0;
@@ -76,9 +76,13 @@ $include-html-funsha-classes: true !default;
 
 @if $include-html-funsha-classes != false {
     /* Modified Foundation 4 Reveal classes
+     *
      * Use Foundation 4 default as base and mix in some Bootstrap classe names,
      * in order to make the Reveal classes compatible with AngularUI Bootstrap's
      * `$modal` service.
+     *
+     * To avoid conflicts, the default Reveal classes are disabled from being generated.
+     * As a result of that, some code is exactly copied from the Foundation source (labeled below).
      */
     .reveal-modal-bg {
         @include mod-reveal-bg;
@@ -86,8 +90,8 @@ $include-html-funsha-classes: true !default;
 
     .reveal-modal {
         @include reveal-modal-base;
-        // visibility: visible;
-        // display: block;
+        visibility: visible;
+        display: block;
 
         @include reveal-modal-style;
 
@@ -99,6 +103,24 @@ $include-html-funsha-classes: true !default;
         &.fade.in {
             opacity: 1;
         }
+    }
+
+    // Large Screen Styles. (The exact copy from the source)
+    @media #{$small} {
+        .#{$reveal-modal-class} {
+          @include reveal-modal-style(false, emCalc(30), false, $box-shadow: false, $top-offset: emCalc(100));
+
+          &.tiny  { @include reveal-modal-base(false, 30%); }
+          &.small { @include reveal-modal-base(false, 40%); }
+          &.medium  { @include reveal-modal-base(false, 60%); }
+          &.large { @include reveal-modal-base(false, 70%); }
+          &.xlarge { @include reveal-modal-base(false, 95%); }
+        }
+    }
+
+    // Reveal Print Styles. (The exact copy from the source)
+    @media print {
+    .#{$reveal-modal-class} {background: #fff !important;}
     }
 
     span.hint, p.hint, ul.hint {
@@ -225,5 +247,9 @@ $include-html-funsha-classes: true !default;
         .pwd_strong {
             color: #5da423;
         }
+    }
+
+    .trailing_colon:after {
+        content: ": "
     }
 }

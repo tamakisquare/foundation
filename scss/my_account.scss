@@ -5,8 +5,9 @@
     font-size: 12px;
 }
 
-.form_header h6 {
+.form_title {
     display: inline-block;
+    white-space: nowrap;
 }
 
 .edit_submit {
@@ -35,10 +36,6 @@
     width: 240px;
 }
 
-#personal_info_tab form .field_error {
-    margin: 10px 0 0;
-}
-
 #crop_pic_form {
     .container {
         background: #eee;
@@ -65,7 +62,8 @@
         }
     }
 
-    .arrow {
+    // TODO: [Patrick] Touch up the positioning of the arrow. Would it be a better option to use grid inside the dialog?
+    .fi-arrow-right {
         margin-top: 100px;
         font-size: 3em;
         color: #ccc;
