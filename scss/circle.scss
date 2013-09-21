@@ -1,2 +1,16 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
+
+#cover_img_container {
+	background-color: #eee;
+	padding-bottom: 20px;
+}
+
+#circle_profile {
+	.circle_logo {
+		position: relative;
+		top: -30px;
+		width: 150px;
+		height: 150px;
+	}
+}
