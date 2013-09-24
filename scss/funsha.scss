@@ -201,6 +201,10 @@ $include-html-funsha-classes: true !default;
         }
     }
 
+    .notice_content {
+        display: inline-block;
+    }
+
 
     /* Input tooltip (ex. pwd strength) */
 
