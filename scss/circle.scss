@@ -1,8 +1,11 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
+@import "compass/css3/box-shadow";
+
 #cover_img_container {
 	background-color: #eee;
+	// background-image:url('../../oneplus_ui_2/03. +CSS/img/circle_cover.jpg');
 	padding-bottom: 20px;
 }
 
@@ -12,5 +15,12 @@
 		top: -30px;
 		width: 150px;
 		height: 150px;
+		@include box-shadow (2px 2px 6px #aaa);
+	}
+
+	.circle_descr {
+		font-size: 12px;
+
 	}
 }
+

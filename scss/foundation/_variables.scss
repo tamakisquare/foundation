@@ -165,8 +165,10 @@ $include-html-reveal-classes: false;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
-$header-top-margin: .625em;
-$header-bottom-margin: .313em;
+$header-top-margin: 10px; //by patrick
+$header-bottom-margin: 5px; //by patrick
+// $header-top-margin: .625em;
+// $header-bottom-margin: .313em;
 // $header-text-rendering: optimizeLegibility;
 
 // Control header font sizes

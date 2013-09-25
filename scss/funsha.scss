@@ -229,30 +229,42 @@ $include-html-funsha-classes: true !default;
         }
 
         .pwd_fragile {
-            // TODO: [Patrick] define a colour for `fragile` strength
+          color: #c60f13;
         }
 
         .pwd_weak {
-            color: #c60f13;
+          color: #F7931E;
         }
 
         .pwd_fair {
-            // TODO: [Patrick] define a colour for `fair` strength
+          color: #B3C2C9;
         }
 
         .pwd_good {
-            color: #CCCC33;
+          color: #B6CC36;
         }
 
         .pwd_strong {
-            color: #5da423;
+          color: #5da423;
         }
-    }
+      }
 
     .trailing_colon:after {
         content: ": "
     }
+
+
+    // from patrick's general.css
+
+    ul {
+        list-style-type: none;
+    }
+
+
+
 }
+
+
 
 // From general.css -----------------------------------------------------------------------------------
 
@@ -267,9 +279,7 @@ $include-html-funsha-classes: true !default;
 //     margin: 15px 0 14px;
 // }
 
-// ul {
-//     list-style-type: none;
-// }
+
 
 // ul li ul, ul li ol {
 //     margin-left: 0;
@@ -609,7 +619,11 @@ button .gen-enclosed, button .general, button .access {
 .feedback_response .owner_img,
 .feedback .borrower_img,
 .feedback .lender_img,
-.feedback .owner_img {
+.feedback .owner_img,
+#news_feed_list .member_img,
+#news_feed_list .author_img,
+#news_feed_list .owner_img
+{
     border: 1px solid #ccc;
     width: 42px;
     height: 42px;
@@ -821,12 +835,6 @@ button .gen-enclosed, button .general, button .access {
     -o-border-radius: 3px;
     border-radius: 3px;
     padding: 15px;
-}
-
-.shadow {
-    -moz-box-shadow: 0 0 6px #ccc;
-    -webkit-box-shadow: 0 0 6px #ccc;
-    box-shadow: 0 0 6px #ccc;
 }
 
 .border_left {
