@@ -16,6 +16,8 @@ $include-html-top-bar-classes: false;
 
 @import "compass/css3/transition";
 @import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
 
 //
 // Funsha Variables
@@ -84,6 +86,10 @@ $include-html-funsha-classes: true !default;
      * To avoid conflicts, the default Reveal classes are disabled from being generated.
      * As a result of that, some code is exactly copied from the Foundation source (labeled below).
      */
+
+     // define variables
+     $color_med_gray: #6f6f6f;
+
     .reveal-modal-bg {
         @include mod-reveal-bg;
     }
@@ -124,7 +130,7 @@ $include-html-funsha-classes: true !default;
     }
 
     span.hint, p.hint, ul.hint {
-        color: #6f6f6f;
+        color: $color_med_gray;
         font-size: 12px;
     }
 
@@ -260,6 +266,90 @@ $include-html-funsha-classes: true !default;
         list-style-type: none;
     }
 
+    /*reputation icon*/
+    .item_rep, .user_rep {
+      $rep_ht: 18px;
+
+      display: inline-block;
+      position: relative;
+      margin-left: 5px;
+      padding: 0;
+      height: $rep_ht;
+      @include border-radius (2px);
+      @include box-shadow (2px 2px 2px #eee);
+      background-color: #F7F6F0;
+      border: 1px solid #ccc;
+      line-height: 1;
+
+      .like_percent_container {
+        font-size: 12px;
+        font-weight: bold;
+        color: #555;
+        margin: 0 0 0 -5px;
+      }
+
+      .icon_item, .icon_head, .icon_thumb {
+        height: $rep_ht;
+        position: relative;
+        top: -1px;
+      }
+
+      .icon_item, .icon_head {
+        left: -6px;
+      }
+
+    }
+
+    .total_count {
+      display: inline-block;
+      font-size: 14px;
+      color: #fff;
+      background-color: #999;
+      @include border-radius (2px);
+      padding: 2px 4px;
+      margin-left: 10px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .title .total_count {
+      line-height: 1.1;
+    }
+
+    section:not(.active) .title .total_count {
+      color: $color_med_gray;
+      background-color: #fff;
+    }
+
+    .hint {
+      color: $color_med_gray;
+      font-size: 12px;
+    }
+
+    img.multi_user_img {
+      position: relative;
+      z-index: 10;
+
+      &+div, &+div+div {
+        position:absolute;
+        top: 0;
+        width: 42px;
+        height: 42px;
+        border: 1px solid #ccc;
+        @include border-radius (21px);
+        background-color: #fff;
+      }
+
+      &+div {
+        z-index: 9;
+        right: 10px;
+      }
+
+      &+div+div {
+        z-index: 8;
+        right: 6px;
+      }
+    }
 
 
 }
@@ -497,31 +587,7 @@ padding: 3px 8px 4px;
 
 /*supplementary to foundation reveal box width - ends*/
 
-.total_count {
-    display: inline-block;
-    font-size: 14px;
-    color: #fff;
-    background-color: #999;
-    border-radius: 3px;
-    padding: 2px 4px;
-    margin-left: 10px;
-    min-width: 24px;
-    text-align: center;
-}
 
-dl.tabs .total_count {
-    line-height: 1.1;
-}
-
-dl.tabs dd:not(.active) .total_count {
-    color: #6f6f6f;
-    background-color: #fff;
-}
-
-.hint {
-    color: #6f6f6f;
-    font-size: 12px;
-}
 
 .btn_section {
     text-align: right;
@@ -608,10 +674,11 @@ button .gen-enclosed, button .general, button .access {
     font-weight: bold;
 }
 
-.feedback .time_stamp, .feedback_response .time_stamp, .response_input_container .time_stamp {
+.feedback .time_stamp, .feedback_response .time_stamp, .response_input_container .time_stamp, #news_feed_list .time_stamp {
     color: #6f6f6f;
     margin-left: 10px;
     font-size: 11px;
+    display: inline-block;
 }
 
 .feedback_response .borrower_img,
@@ -666,59 +733,6 @@ button .gen-enclosed, button .general, button .access {
     margin: 20px 0;
 }
 /*review section - ends*/
-
-/*reputation icon - starts*/
-
-
-.item_rep, .user_rep {
-    margin-left: 5px;
-    padding: 0;
-    display: inline-block;
-    /*background: #D6E3E5;*/
-    border-radius: 2px;
-
-    position: relative;
-    height: 18px;
-    background-color: #F7F6F0;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 2px #eee;
-}
-
-.like_percent_container {
-    font-size: 12px;
-    font-weight: bold;
-    color: #555;
-    /*vertical-align: middle;*/
-    margin: 0 0 0 -5px;
-
-    position: relative;
-    top: -5px;
-}
-
-.icon_item, .icon_head {
-    height: 18px;
-    /*vertical-align: middle;*/
-
-    position: relative;
-    top: -1px;
-    left: -6px;
-}
-
-.icon_thumb {
-    height: 18px;
-    /*vertical-align: middle;*/
-
-    position: relative;
-    top: -1px;
-    /*right: -5px;*/
-}
-
-.rep_less_icon {
-    font-size: 10px;
-    color: #555;
-    vertical-align: top;
-}
-/*reputation icon - ends*/
 
 .custom_checkbox {
     display: inline-block;

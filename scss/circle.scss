@@ -6,7 +6,7 @@
 #cover_img_container {
 	background-color: #eee;
 	// background-image:url('../../oneplus_ui_2/03. +CSS/img/circle_cover.jpg');
-	padding-bottom: 20px;
+
 }
 
 #circle_profile {
@@ -20,7 +20,61 @@
 
 	.circle_descr {
 		font-size: 12px;
-
 	}
+}
+
+li.news {
+	font-size: 14px;
+	padding: 15px 0;
+	border-bottom: 1px solid #eee;
+	.news_title {
+		line-height: 1.4;
+		margin-bottom: 10px;
+	}
+	.member_name, .author_name, .item_name, .discussion_topic {
+		font-weight: bold;
+	}
+
+	.discussion_topic {
+		font-style: italic;
+	}
+
+	.user_rep, .deposit {
+		margin-right: 10px;
+	}
+
+	.feedback_rating {
+		margin: 0 5px;
+	}
+	.comment {
+		position: relative;
+		font-size: 12px;
+		width: 500px;
+		padding-right: 60px;
+		margin-bottom: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.show_all_comment {
+		position: absolute;
+		right: 5px;
+	}
+
+	.show_less_comment {
+		display: none;
+	}
+
+	.item_img {
+		width: 40px;
+		height: 40px;
+	}
+
+
+}
+
+#others_wish_container {
+	margin-top: 52px;
 }
 
