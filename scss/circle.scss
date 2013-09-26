@@ -23,6 +23,11 @@
 	}
 }
 
+.discussion_topic {
+		// font-style: italic;
+	}
+
+// news feed
 li.news {
 	font-size: 14px;
 	padding: 15px 0;
@@ -30,13 +35,6 @@ li.news {
 	.news_title {
 		line-height: 1.4;
 		margin-bottom: 10px;
-	}
-	.member_name, .author_name, .item_name, .discussion_topic {
-		font-weight: bold;
-	}
-
-	.discussion_topic {
-		font-style: italic;
 	}
 
 	.user_rep, .deposit {
@@ -71,6 +69,64 @@ li.news {
 		height: 40px;
 	}
 
+}
+
+// discussion
+#discussion_guidelines {
+	font-size: 12px;
+}
+
+#topic_list {
+	border-top: 1px solid #ddd;
+}
+
+li.topic {
+	font-size: 14px;
+	padding: 15px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.topic_detail_section {
+
+	.topic_list_enter {
+		font-size: 14px;
+		i.foundicon-left-arrow {
+			vertical-align: middle;
+		}
+	}
+
+	.flat_but {
+		margin: 0 5px;
+	}
+
+	.topic_unsubscribe {
+		display: none;
+	}
+
+	.comment_list {
+		// border-top: 1px solid #ddd;
+	}
+
+	.initial_post {
+		font-size: 14px;
+		line-height: 1.6;
+		margin: 0 -30px;
+	}
+
+	li.post, li.deleted_post {
+		font-size: 14px;
+		padding: 15px 0;
+		border-bottom: 1px solid #eee;
+
+		.flat_but:first-of-type {
+			margin-left: -4px;
+		}
+	}
+
+	.comment {
+		font-size: 12px;
+		margin-bottom: 0;
+	}
 
 }
 
