@@ -256,4 +256,22 @@ $include-html-funsha-classes: true !default;
     .trailing_colon:after {
         content: ": "
     }
+
+    .hint {
+        color: #6f6f6f;
+        font-size: 12px;
+    }
+
+    .empty_notice {
+        color: #6f6f6f;
+        background-color: #eee;
+        font-size: 12px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px;
+        padding: 5px;
+        line-height: 1.3;
+    }
 }
