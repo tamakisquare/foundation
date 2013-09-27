@@ -87,6 +87,7 @@ li.topic {
 }
 
 .topic_detail_section {
+	padding-top: 20px;
 
 	.topic_list_enter {
 		font-size: 14px;
@@ -111,6 +112,10 @@ li.topic {
 		font-size: 14px;
 		line-height: 1.6;
 		margin: 0 -30px;
+
+		.alert-box {
+			margin: 0 20px;
+		}
 	}
 
 	li.post, li.deleted_post {
@@ -134,3 +139,7 @@ li.topic {
 	margin-top: 52px;
 }
 
+li.member {
+	width: 33%;
+	border: 1px solid #ccc;
+}
