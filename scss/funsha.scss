@@ -262,8 +262,34 @@ $include-html-funsha-classes: true !default;
 
     // from patrick's general.css
 
+    // layout styles
     ul {
       list-style-type: none;
+    }
+
+    .self_clear {
+      display: block;
+
+      &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+    }
+
+    .clickable_list_item {
+      border: 1px solid #ddd;
+      @include border-radius(4px);
+      padding: 10px 5px;
+      margin: 2px 0;
+
+      &:hover {
+        border: 1px solid #aaa;
+        @include box-shadow(2px 2px 6px #bbb);
+        cursor: pointer;
+      }
     }
 
     /*reputation icon*/
@@ -390,25 +416,25 @@ $include-html-funsha-classes: true !default;
 
     // note: was named .response_enter
     .flat_but {
-    font-size: 12px;
-    font-weight: bold;
-    color: #777;
-    padding: 2px 4px;
-    margin-left: -4px;
-    @include border-radius(2px);
+      font-size: 12px;
+      font-weight: bold;
+      color: #777;
+      padding: 2px 4px;
+      margin-left: -4px;
+      @include border-radius(2px);
 
-    &:hover,  {
+      &:hover,  {
+        color: #222;
+        cursor: pointer;
+        background: #ddd;
+      }
+    }
+
+    .flat_but_hover {
       color: #222;
       cursor: pointer;
-      background: #ddd;
+      background: #eee;
     }
-  }
-
-  .flat_but_hover {
-    color: #222;
-    cursor: pointer;
-    background: #eee;
-  }
 
 
   }
@@ -926,20 +952,6 @@ $include-html-funsha-classes: true !default;
     padding: 2px 15px;
     line-height: 1.3;
     display: inline-block;
-
-
-  }
-
-  .self_clear:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-
-  .self_clear {
-    display: block;
   }
 
   .arrow_up_small, .arrow_up_medium, .arrow_up_large, .arrow_down_small, .arrow_down_medium, .arrow_down_large,

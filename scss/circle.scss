@@ -21,6 +21,16 @@
 	.circle_descr {
 		font-size: 12px;
 	}
+
+	.edit_circle_enter {
+		position: relative;
+		top: 14px;
+		left: -10px;
+		font-size: 14px;
+		i.foundicon-settings {
+			vertical-align: middle;
+		}
+	}
 }
 
 .discussion_topic {
@@ -78,12 +88,18 @@ li.news {
 
 #topic_list {
 	border-top: 1px solid #ddd;
+	padding-top: 10px;
 }
 
 li.topic {
 	font-size: 14px;
-	padding: 15px 0;
-	border-bottom: 1px solid #eee;
+}
+
+#topic_listview_section {
+	.new_topic_enter {
+		position: relative;
+		top: 5px;
+	}
 }
 
 .topic_detail_section {
@@ -96,16 +112,16 @@ li.topic {
 		}
 	}
 
+	.discussion_topic_container {
+		margin-top: 5px;
+	}
+
 	.flat_but {
 		margin: 0 5px;
 	}
 
 	.topic_unsubscribe {
 		display: none;
-	}
-
-	.comment_list {
-		// border-top: 1px solid #ddd;
 	}
 
 	.initial_post {
@@ -139,7 +155,66 @@ li.topic {
 	margin-top: 52px;
 }
 
-li.member {
-	width: 33%;
-	border: 1px solid #ccc;
+
+#member_section {
+	.content {
+		padding-top: 20px;
+	}
+
+	button.resign_admin, button.circle_invitation_enter {
+		position: relative;
+		top: 5px;
+	}
+
+	#admin_list, #non_admin_list {
+		border-top: 1px solid #ddd;
+		padding-top: 10px;
+
+		li.member {
+			width: 200px;
+			font-size: 14px;
+			padding: 5px 10px 15px 5px;
+
+			.member_img {
+				margin-right: 10px;
+			}
+
+			.info_container {
+				width: 130px;
+				min-height: 65px;
+			}
+
+			.time_stamp {
+				margin-left: 5px;
+			}
+
+			.assign_admin {
+				display: none;
+			}
+		}
+
+	}
+
+
+}
+
+#item_list {
+	border-top: 1px solid #ddd;
+	margin-top: 10px;
+
+	li.item {
+		font-size: 14px;
+		border-bottom: 1px solid #eee;
+		margin: 2px 0;
+		padding: 10px 0;
+
+		.item_img {
+			width: 40px;
+			height: 40px;
+		}
+
+		.deposit {
+			margin-right: 10px;
+		}
+	}
 }
