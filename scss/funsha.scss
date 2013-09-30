@@ -92,6 +92,8 @@ $include-html-funsha-classes: true !default;
 
      .reveal-modal-bg {
       @include mod-reveal-bg;
+
+      display: none;
     }
 
     .reveal-modal {
@@ -109,6 +111,8 @@ $include-html-funsha-classes: true !default;
       &.fade.in {
         opacity: 1;
       }
+
+      display: none;
     }
 
     // Large Screen Styles. (The exact copy from the source)
@@ -121,6 +125,10 @@ $include-html-funsha-classes: true !default;
         &.medium  { @include reveal-modal-base(false, 60%); }
         &.large { @include reveal-modal-base(false, 70%); }
         &.xlarge { @include reveal-modal-base(false, 95%); }
+
+        // Fixed-width sizes for Reveal
+        &.fixed_width_small { @include reveal-modal-base(false, 520px); }
+        &.fixed_width_medium { @include reveal-modal-base(false, 680px); }
       }
     }
 
@@ -290,6 +298,12 @@ $include-html-funsha-classes: true !default;
         @include box-shadow(2px 2px 6px #bbb);
         cursor: pointer;
       }
+    }
+
+    // place holder
+    .text_formatting_toolbar {
+      height: 32px;
+      background-color: #eee;
     }
 
     /*reputation icon*/
