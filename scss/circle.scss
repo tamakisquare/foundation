@@ -228,3 +228,54 @@ li.topic {
 #invitation_msg_input {
 	min-height: 100px;
 }
+
+// below is for create circle page
+#create_circle_form {
+	.row {
+		margin: 20px 0;
+	}
+
+	fieldset {
+		margin-bottom: 20px;
+	}
+}
+
+#circle_name_input {
+	font-size: 18px;
+	height: 32px;
+}
+
+#choose_circle_logo {
+	margin-right: 20px;
+}
+
+#crop_logo_dialog {
+	.original_pic_container, .cropped_preview_container {
+		background-color: #eee;
+		text-align: center;
+	}
+
+	.original_pic_container {
+		width: 360px;
+		height: 360px;
+	}
+
+	.cropped_preview_container {
+		width: 150px;
+		height: 150px;
+	}
+
+	i.foundicon-right-arrow {
+		position: absolute;
+		top: 95px;
+		left: -25px;
+		font-size: 2em;
+		color: #ccc;
+	}
+}
+
+#recaptcha_container {
+	background: #fff;
+	border: 1px solid #ccc;
+	height: 100px;
+}
