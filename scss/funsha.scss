@@ -489,8 +489,6 @@ $include-html-funsha-classes: true !default;
 /*header nav and footer - starts*/
 #header_logo {
   font-size: 18px;
-    /*font-weight: normal;
-    color: #D9E021;*/
   }
 
   .top-bar {
@@ -511,7 +509,8 @@ $include-html-funsha-classes: true !default;
   }
 
   nav.top-bar .foundicon-settings {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1;
     vertical-align: middle;
     margin-left: 10px;
   }

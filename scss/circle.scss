@@ -161,7 +161,7 @@ li.topic {
 		padding-top: 20px;
 	}
 
-	button.resign_admin, button.circle_invitation_enter {
+	button.resign_admin_enter, button.circle_invitation_enter {
 		position: relative;
 		top: 5px;
 	}
@@ -188,7 +188,7 @@ li.topic {
 				margin-left: 5px;
 			}
 
-			.assign_admin {
+			.assign_admin_enter {
 				display: none;
 			}
 		}
@@ -217,4 +217,14 @@ li.topic {
 			margin-right: 10px;
 		}
 	}
+}
+
+#assign_admin_dialog {
+	.member_name {
+		margin-bottom: 10px;
+	}
+}
+
+#invitation_msg_input {
+	min-height: 100px;
 }
