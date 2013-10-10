@@ -428,8 +428,8 @@ $include-html-funsha-classes: true !default;
 
     // input Style
 
-    // note: was named .response_enter
-    .flat_but {
+    // note: was named ".response_enter"
+    .flat_btn {
       font-size: 12px;
       font-weight: bold;
       color: #777;
@@ -444,12 +444,47 @@ $include-html-funsha-classes: true !default;
       }
     }
 
-    .flat_but_hover {
+    .flat_btn_hover {
       color: #222;
       cursor: pointer;
       background: #eee;
     }
 
+    // confirmation button group
+
+    //use following along with small buttons
+    .button-group.confirm.small {
+      display: inline-block;
+      @include box-shadow(2px 2px 5px #ddd);
+
+      li {
+        a {
+          min-width: 60px;
+        }
+
+        &:first-child {
+        font-size: 12px;
+        font-weight: bold;
+        height: 26px;
+        padding: 2px 30px;
+        background-color: #FFD261;
+        border-top: 1px solid #c3c3c3;
+        border-left: 1px solid #c3c3c3;
+        border-bottom: 1px solid #c3c3c3;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        }
+      }
+
+
+    }
+
+    //link with black color and underline
+
+    .black_link {
+      color: #222;
+      text-decoration: underline;
+    }
 
   }
 

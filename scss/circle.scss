@@ -19,29 +19,60 @@
 	}
 
 	.circle_descr {
-		font-size: 12px;
+		font-size: 14px;
 	}
 
-	.edit_circle_enter {
+	.edit_circle_enter, .quit_circle_enter {
+		font-size: 12px;
 		position: relative;
 		top: 14px;
 		left: -10px;
-		font-size: 14px;
-		i.foundicon-settings {
-			vertical-align: middle;
-		}
+		margin-right: 10px;
 	}
 }
 
-.discussion_topic {
-		// font-style: italic;
-	}
-
 // news feed
+#news_feed_section {
+	.content>.btn_section {
+		border-bottom: 1px solid #ddd;
+		padding: 10px 0 5px;
+	}
+}
+
+#news_feed_list {
+	// border-top: 1px solid #ddd;
+
+}
+
 li.news {
 	font-size: 14px;
 	padding: 15px 0;
 	border-bottom: 1px solid #eee;
+
+	i.icon-user-delete-outline,
+	i.icon-user-add-outline,
+	i.icon-user-add,
+	i.icon-user-delete,
+	i.icon-chat-1,
+	i.icon-chat-alt {
+		font-size: 24px;
+	}
+
+	i.icon-user-delete-outline,
+	i.icon-user-delete {
+		color: #FFD261;
+	}
+
+	i.icon-user-add-outline,
+	i.icon-user-add {
+		color: #39B54A;
+	}
+
+	i.icon-chat-1,
+	i.icon-chat-alt {
+		color: #999;
+	}
+
 	.news_title {
 		line-height: 1.4;
 		margin-bottom: 10px;
@@ -93,6 +124,14 @@ li.news {
 
 li.topic {
 	font-size: 14px;
+
+	.latest_comment {
+		margin-left: 10px;
+		.time_stamp {
+			margin: 0;
+			font-size: 12px;
+		}
+	}
 }
 
 #topic_listview_section {
@@ -102,8 +141,10 @@ li.topic {
 	}
 }
 
+
 .topic_detail_section {
 	padding-top: 20px;
+	font-size: 14px;
 
 	.topic_list_enter {
 		font-size: 14px;
@@ -116,16 +157,26 @@ li.topic {
 		margin-top: 5px;
 	}
 
-	.flat_but {
+	.flat_btn {
 		margin: 0 5px;
 	}
 
+	.topic_subscribe, .topic_unsubscribe {
+		display: inline-block;
+		width: 105px;
+		height: 19px;
+		padding-top: 4px;
+		text-align: center;
+		i {
+			line-height: 0;
+		}
+	}
+
 	.topic_unsubscribe {
-		display: none;
+		// display: none;
 	}
 
 	.initial_post {
-		font-size: 14px;
 		line-height: 1.6;
 		margin: 0 -30px;
 
@@ -135,11 +186,10 @@ li.topic {
 	}
 
 	li.post, li.deleted_post {
-		font-size: 14px;
 		padding: 15px 0;
 		border-bottom: 1px solid #eee;
 
-		.flat_but:first-of-type {
+		.flat_btn:first-of-type {
 			margin-left: -4px;
 		}
 	}
@@ -149,10 +199,26 @@ li.topic {
 		margin-bottom: 0;
 	}
 
+	.btn_section {
+		text-align: left;
+	}
+
+	.deleted_msg {
+		display: none;
+	}
+
+}
+
+#circle_rule_list {
+	list-style-position: inside;
+	font-size: 14px;
+	li.circle_rule {
+		margin-bottom: 8px;
+	}
 }
 
 #others_wish_container {
-	margin-top: 52px;
+	// margin-top: 52px;
 }
 
 
@@ -223,10 +289,6 @@ li.topic {
 	.member_name {
 		margin-bottom: 10px;
 	}
-}
-
-#invitation_msg_input {
-	min-height: 100px;
 }
 
 // below is for create circle page
