@@ -187,6 +187,8 @@ $include-html-funsha-classes: true !default;
         }
 
 
+
+
         /* Alert boxes (success action notice and top alert box) */
 
         .notice-box-bg {
@@ -269,6 +271,34 @@ $include-html-funsha-classes: true !default;
 
 
     // from patrick's general.css
+
+    /*header nav and footer - starts*/
+    nav.top-bar {
+
+      #header_logo {
+        font-size: 18px;
+      }
+
+      ul > li.has-dropdown a {
+        padding-right: 15px;
+
+        &::after {
+          content: none;
+        }
+      }
+
+      .foundicon-settings {
+        font-size: 14px;
+        line-height: 1;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+
+    }
+
+    footer {
+      margin-bottom: 20px;
+    }
 
     // layout styles
     ul {
@@ -451,7 +481,6 @@ $include-html-funsha-classes: true !default;
     }
 
     // confirmation button group
-
     //use following along with small buttons
     .button-group.confirm.small {
       display: inline-block;
@@ -475,16 +504,15 @@ $include-html-funsha-classes: true !default;
         border-bottom-left-radius: 3px;
         }
       }
-
-
     }
 
     //link with black color and underline
-
     .black_link {
       color: #222;
       text-decoration: underline;
     }
+
+
 
   }
 
@@ -521,70 +549,11 @@ $include-html-funsha-classes: true !default;
 // }
 /*supplementary to foundation css - ends*/
 
-/*header nav and footer - starts*/
-#header_logo {
-  font-size: 18px;
-  }
-
-  .top-bar {
-    margin: 0;
-    background: #4D4235;
-  }
-
-  .top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active {
-    background: #392E21;
-  }
-
-  .top-bar ul > li.has-dropdown a::after {
-    content: none;
-  }
-
-  .top-bar ul > li.has-dropdown a {
-    padding-right: 15px;
-  }
-
-  nav.top-bar .foundicon-settings {
-    font-size: 14px;
-    line-height: 1;
-    vertical-align: middle;
-    margin-left: 10px;
-  }
-
-  #quick_search_form {
-    display: inline-block; margin-bottom: 0; padding: 0 5px; vertical-align: middle;
-  }
-
-  #quick_search_input.quick_search_input_focus, #quick_search_input.quick_search_input_focusout {
-    height: 25px;
-    margin-bottom: 0;
-    border: 1px solid #B7D6E2;
-    -webkit-transition: all 0 ease 0;
-    -moz-transition: all 0 ease 0;
-    -o-transition: all 0 ease 0;
-    transition: all 0 ease 0;
-  }
-
-  #quick_search_input.quick_search_input_focusout {
-    width: 145px;
-    background-color: #eee;
-  }
 
 
-  #quick_search_input.quick_search_input_focus {
-    background-color: #fff;
-    width: 400px;
-    font-size: 18px;
-  }
 
-  #quick_search_submit {
-    padding: 4px 10px;
-    font-size: 14px;
-    vertical-align: middle;
-  }
 
-  footer {
-    margin-bottom: 20px;
-  }
+
 
   .test_element {
     padding: 0 10px;

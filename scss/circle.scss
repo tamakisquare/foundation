@@ -2,6 +2,7 @@
 @charset "UTF-8";
 
 @import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
 
 #cover_img_container {
 	background-color: #eee;
@@ -49,28 +50,34 @@ li.news {
 	padding: 15px 0;
 	border-bottom: 1px solid #eee;
 
-	i.icon-user-delete-outline,
-	i.icon-user-add-outline,
-	i.icon-user-add,
-	i.icon-user-delete,
+	i.icon-user-delete-1,
+	i.icon-user-add-1,
+	i.icon-user-add-2,
+	i.icon-user-delete-2,
 	i.icon-chat-1,
-	i.icon-chat-alt {
-		font-size: 24px;
+	i.icon-chat-2,
+	i.icon-plus-square,
+	i.icon-thumbs-up,
+	i.icon-thumbs-down,
+	i.icon-megaphone {
+		font-size: 18px;
+		color: #696969;
+		margin-right: 30px;
 	}
 
-	i.icon-user-delete-outline,
-	i.icon-user-delete {
-		color: #FFD261;
+	i.icon-thumbs-up {
+		position: absolute;
+		right: 88px;
+		top: 10px;
+		margin: 0;
 	}
 
-	i.icon-user-add-outline,
-	i.icon-user-add {
-		color: #39B54A;
-	}
-
-	i.icon-chat-1,
-	i.icon-chat-alt {
-		color: #999;
+	i.icon-thumbs-down {
+		position: absolute;
+		right: 80px;
+		top: 20px;
+		margin: 0;
+		color: #ddd;
 	}
 
 	.news_title {
@@ -85,24 +92,31 @@ li.news {
 	.feedback_rating {
 		margin: 0 5px;
 	}
-	.comment {
+	.comment, .announcement_detail {
 		position: relative;
 		font-size: 12px;
-		width: 500px;
-		padding-right: 60px;
+		width: 390px;
+		// padding-right: 60px;
 		margin-bottom: 0;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		float: left;
 	}
 
-	.show_all_comment {
-		position: absolute;
-		right: 5px;
+	.all_content {
+		white-space: normal;
+		overflow: visible;
 	}
 
-	.show_less_comment {
+	.show_all {
+		float: right;
+		font-size: 12px;
+	}
+
+	.show_less {
 		display: none;
+		margin-left: 10px;
 	}
 
 	.item_img {
@@ -114,7 +128,7 @@ li.news {
 
 // discussion
 #discussion_guidelines {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 #topic_list {
@@ -305,6 +319,25 @@ li.topic {
 #circle_name_input {
 	font-size: 18px;
 	height: 32px;
+}
+
+.rule_display {
+	margin-bottom: 5px;
+	line-height: 1.3;
+	border: 1px solid #fff;
+	padding: 6px;
+	width: 100%;
+
+	&:hover {
+		cursor: text;
+		border: 1px solid #ccc;
+		@include box-shadow(inset 0 1px 2px rgba(0,0,0,0.1));
+	}
+}
+
+.rule_number, .rule_delete {
+	display: inline-block;
+	margin-top: 7px;
 }
 
 #choose_circle_logo {
