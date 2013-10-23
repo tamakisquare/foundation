@@ -45,8 +45,7 @@ $em-base: 16px !default;
 }
 
 //Retaining this for backward compatability
-
-@function emCalc($pxWidth) {
+@function emCalc($values){
   @return em-calc($values);
 }
 
