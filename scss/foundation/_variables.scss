@@ -47,7 +47,7 @@ $em-base: 16px !default;
 //Retaining this for backward compatability
 
 @function emCalc($pxWidth) {
-  @return $pxWidth / $em-base * 1em;
+  @return em-calc($values);
 }
 
 // Maybe you want to create rems with pixels
