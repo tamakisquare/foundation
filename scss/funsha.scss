@@ -330,10 +330,9 @@ $include-html-funsha-classes: true !default;
       }
     }
 
-    // place holder
-    .text_formatting_toolbar {
-      height: 32px;
-      background-color: #eee;
+    .black_trans_bg {
+      background-color: #222;
+      opacity: 0.8;
     }
 
     /*reputation icon*/

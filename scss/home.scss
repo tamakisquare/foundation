@@ -1,0 +1,152 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
+img.do_more_img {
+	width: 1000px;
+	// height: 450px;
+	// float: left;
+}
+
+#do_more_container {
+	position: relative;
+	margin: 0 -15px;
+
+	.black_trans_bg {
+		height: 30px;
+		width: 1000px;
+		text-align: center;
+		position: absolute;
+		top:0;
+		p {
+			color: #fff;
+		}
+	}
+
+	.heading {
+		font-size: 60px;
+		font-weight: bold;
+		color: #fff;
+		position: absolute;
+		left: 380px;
+		top: 50px;
+	}
+}
+
+#with_less_container {
+
+	margin-bottom: 40px;
+
+	.heading {
+		margin-top: 10px;
+		font-size: 54px;
+		color: #8CC63F;
+
+	}
+}
+
+#transaction_flow_container {
+	margin-bottom: 40px;
+
+	&>.heading {
+		// color: #29ABE2;
+	}
+
+	.background_container {
+		width: 100%;
+		height: 550px;
+		position: relative;
+		background: #fff url('../../oneplus_ui_2/03. +CSS/img/transaction_flow_diagram.png') no-repeat center;
+		background-size: 600px;
+		border: 1px solid #ccc;
+		@include border-radius(5px);
+		@include box-shadow(2px 2px 5px rgba(0,0,0,0.1));
+	}
+
+	.transaction_step {
+		position: absolute;
+		width: 190px;
+
+		p {
+			font-size: 14px;
+			color: #fff;
+			padding: 5px 10px;
+			min-height: 170px;
+			display: none;
+		}
+
+		.transaction_detail_enter {
+			// text-decoration: underline;
+		}
+
+	}
+
+	.transaction_step.find_item {
+		top: 0;
+		left: 40px;
+
+		.heading {
+			display: inline-block;
+			background-color: #00A99D;
+			color: #fff;
+			padding: 0 10px;
+
+			i {
+				vertical-align: middle;
+				font-size: 16px;
+			}
+		}
+	}
+	.transaction_step.post_item {
+		top: 0;
+		left: 240px;
+
+		.heading {
+			display: inline-block;
+			background-color: #FBB03B;
+			color: #fff;
+			padding: 0 10px;
+
+			i {
+				vertical-align: middle;
+				font-size: 16px;
+			}
+		}
+
+		i.foundicon-right-arrow {
+			position: absolute;
+			font-size: 32px;
+			top: 180px;
+			left: 150px;
+		}
+	}
+	.transaction_step.request {
+		top: 35px;
+		left: 440px;
+
+		i.foundicon-down-arrow {
+			position: absolute;
+			font-size: 32px;
+			top: 250px;
+			left: 90px;
+		}
+	}
+	.transaction_step.pickup {
+		top: 310px;
+		left: 350px;
+
+		i.foundicon-left-arrow {
+			position: absolute;
+			font-size: 32px;
+			top: 10px;
+			left: -80px;
+		}
+	}
+	.transaction_step.return {
+		top: 310px;
+		left: 70px;
+	}
+
+}
