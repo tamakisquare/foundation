@@ -4,10 +4,13 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
 
+
+#header_logo img {
+	height:32px;
+}
+
 img.do_more_img {
 	width: 1000px;
-	// height: 450px;
-	// float: left;
 }
 
 #do_more_container {
@@ -30,8 +33,9 @@ img.do_more_img {
 		font-weight: bold;
 		color: #fff;
 		position: absolute;
-		left: 380px;
-		top: 50px;
+		top: 40px;
+		width: 100%;
+		text-align: center;
 	}
 }
 
@@ -39,20 +43,28 @@ img.do_more_img {
 
 	margin-bottom: 40px;
 
-	.heading {
+	&>.heading {
 		margin-top: 10px;
 		font-size: 54px;
-		color: #8CC63F;
+		color: #99C455;
 
+	}
+}
+
+#more_benefit_container {
+	padding: 0 10px;
+	background-color: #F7F6F0;
+	@include border-radius(5px);
+	border: 1px solid #4d4235;
+	display: none;
+
+	&>.heading {
+		border-bottom: 1px dashed #4d4235;
 	}
 }
 
 #transaction_flow_container {
 	margin-bottom: 40px;
-
-	&>.heading {
-		// color: #29ABE2;
-	}
 
 	.background_container {
 		width: 100%;
@@ -62,7 +74,7 @@ img.do_more_img {
 		background-size: 600px;
 		border: 1px solid #ccc;
 		@include border-radius(5px);
-		@include box-shadow(2px 2px 5px rgba(0,0,0,0.1));
+		@include box-shadow(3px 3px 5px rgba(0,0,0,0.1));
 	}
 
 	.transaction_step {
@@ -75,10 +87,7 @@ img.do_more_img {
 			padding: 5px 10px;
 			min-height: 170px;
 			display: none;
-		}
-
-		.transaction_detail_enter {
-			// text-decoration: underline;
+			opacity: 0.9;
 		}
 
 	}
@@ -89,7 +98,8 @@ img.do_more_img {
 
 		.heading {
 			display: inline-block;
-			background-color: #00A99D;
+			background-color: #26B1BF;
+
 			color: #fff;
 			padding: 0 10px;
 
@@ -98,14 +108,19 @@ img.do_more_img {
 				font-size: 16px;
 			}
 		}
+
+		p {
+			width: 150px;
+		}
 	}
+
 	.transaction_step.post_item {
 		top: 0;
-		left: 240px;
+		left: 220px;
 
 		.heading {
 			display: inline-block;
-			background-color: #FBB03B;
+			background-color: #F4D242;
 			color: #fff;
 			padding: 0 10px;
 
@@ -121,9 +136,14 @@ img.do_more_img {
 			top: 180px;
 			left: 150px;
 		}
+
+		p {
+			width: 150px;
+		}
 	}
+
 	.transaction_step.request {
-		top: 35px;
+		top: 40px;
 		left: 440px;
 
 		i.foundicon-down-arrow {
@@ -133,6 +153,7 @@ img.do_more_img {
 			left: 90px;
 		}
 	}
+
 	.transaction_step.pickup {
 		top: 310px;
 		left: 350px;
@@ -149,4 +170,64 @@ img.do_more_img {
 		left: 70px;
 	}
 
+}
+
+#feature_container {
+
+	.catogory_heading {
+		background-color: #eee;
+		color: #696969;
+		padding: 0 5px;
+		@include border-radius(2px);
+	}
+
+	.feature {
+		margin-top: 40px;
+
+		.feature_icon {
+			width: 22px;
+			margin-right: 10px;
+		}
+	}
+
+}
+
+#news_feed_list {
+	height: 1300px;
+	background-color: #f2f2f2;
+	padding: 20px;
+
+
+	.news {
+		border-bottom: 1px solid #fff;
+
+		.time_stamp {
+			margin: 0;
+		}
+
+		p {
+			font-size: 14px;
+		}
+	}
+}
+
+#signup_container {
+
+	margin-top: 40px;
+	.heading {
+		text-align: center;
+
+		.funsha_logo {
+			height: 70px;
+			position: relative;
+			bottom: 8px;
+			margin: 0 10px;
+		}
+	}
+
+}
+
+#signup_email_input {
+	width: 350px;
+	display: inline-block;
 }

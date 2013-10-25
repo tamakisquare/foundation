@@ -87,6 +87,9 @@ $include-html-funsha-classes: true !default;
      * As a result of that, some code is exactly copied from the Foundation source (labeled below).
      */
 
+     //to prevent screen jumping when scroll bar appear/disapear
+     html {overflow-y: scroll;}
+
      // define variables
      $color_med_gray: #6f6f6f;
 
@@ -509,6 +512,23 @@ $include-html-funsha-classes: true !default;
     .black_link {
       color: #222;
       text-decoration: underline;
+    }
+
+    //link_bar: group of links
+    ul.link_bar {
+      display: inline-block;
+
+      li {
+        float: left;
+
+        &:not(:last-of-type):after {
+          content: "|";
+        }
+
+        a {
+          margin: 0 8px;
+        }
+      }
     }
 
 
