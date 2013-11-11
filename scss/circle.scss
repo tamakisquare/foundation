@@ -4,10 +4,15 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
 
+.invitee_notice {
+		background-color: #FFD261;
+		font-weight: bold;
+		width: 100%;
+}
+
 #cover_img_container {
 	background-color: #eee;
 	// background-image:url('../../oneplus_ui_2/03. +CSS/img/circle_cover.jpg');
-
 }
 
 #circle_profile {
@@ -30,6 +35,12 @@
 		left: -10px;
 		margin-right: 10px;
 	}
+
+	// .invitee_notice {
+	// 	background-color: #FFD261;
+	// 	font-weight: bold;
+	// 	padding: 0 20px;
+	// }
 }
 
 // news feed
