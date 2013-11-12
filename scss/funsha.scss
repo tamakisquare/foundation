@@ -531,6 +531,15 @@ $include-html-funsha-classes: true !default;
       }
     }
 
+    //disabled link
+    a.disabled {
+      color: #ccc;
+      background-color: none;
+      &:hover {
+        cursor: default;
+      }
+    }
+
 
 
   }
