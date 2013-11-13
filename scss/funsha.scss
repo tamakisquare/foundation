@@ -172,6 +172,7 @@ $include-html-funsha-classes: true !default;
 
     /* Top navigation bar */
 
+    /*
     a#user_dropdown_toggle {
         padding-right: $topbar-height / 3 !important;   // overrides Foundation's default for .has-dropdown > a
 
@@ -183,6 +184,8 @@ $include-html-funsha-classes: true !default;
             margin-right: 10px;
           }
         }
+
+        */
 
         input#quick_search {
           width: 145px;
@@ -282,13 +285,17 @@ $include-html-funsha-classes: true !default;
         font-size: 18px;
       }
 
-      ul > li.has-dropdown a {
-        padding-right: 15px;
-
-        &::after {
-          content: none;
-        }
+      #header_logo img {
+        height:32px;
       }
+
+      // ul > li.has-dropdown a {
+      //   padding-right: 15px;
+
+      //   &::after {
+      //     content: none;
+      //   }
+      // }
 
       .foundicon-settings {
         font-size: 14px;
@@ -297,6 +304,39 @@ $include-html-funsha-classes: true !default;
         margin-left: 10px;
       }
 
+    }
+
+    #login_section {
+      @include box-shadow(0 3px 5px #000);
+      @include border-radius(5px);
+      border: solid 2px #6b5c4a;
+      color: #fff;
+      background-color: #222;
+      width: 540px;
+      padding: 0 20px;
+      label {
+        padding-left: 0;
+        color: #fff;
+
+        &[for="keep_login"] {
+          display: inline-block;
+          padding-left: 10px;
+        }
+      }
+
+      a {
+        padding-left: 0;
+        background-color: #222;
+        font-size: 0.8em;
+      }
+
+      #keep_login {
+        display: inline-block;
+      }
+
+      #login_submit {
+        margin-top: 25px;
+      }
     }
 
     footer {
@@ -317,6 +357,13 @@ $include-html-funsha-classes: true !default;
         height: 0;
         clear: both;
         visibility: hidden;
+      }
+    }
+
+    #page_title {
+      i {
+        margin: 0 10px;
+        vertical-align: middle;
       }
     }
 
