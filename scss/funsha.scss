@@ -314,6 +314,7 @@ $include-html-funsha-classes: true !default;
       background-color: #222;
       width: 540px;
       padding: 0 20px;
+
       label {
         padding-left: 0;
         color: #fff;
@@ -337,7 +338,31 @@ $include-html-funsha-classes: true !default;
       #login_submit {
         margin-top: 25px;
       }
+
+      .general_error_notice  {
+
+        border-top: 1px solid red;
+        margin-bottom: 10px;
+
+        .foundicon-remove {
+          color: red;
+          font-size: 1.8em;
+          margin-right: 10px;
+          vertical-align: middle;
+          position: absolute;
+        }
+        .error_list {
+          list-style-type: square;
+          display: inline-block;
+          margin: 10px 0 0 60px;
+          li {
+            background-color: #222;
+          }
+        }
+      }
     }
+
+
 
     footer {
       margin-bottom: 20px;
@@ -507,6 +532,10 @@ $include-html-funsha-classes: true !default;
 
     // input Style
 
+    textarea {
+      margin: 0 0 1em 0;
+    }
+
     // note: was named ".response_enter"
     .flat_btn {
       font-size: 12px;
@@ -587,7 +616,31 @@ $include-html-funsha-classes: true !default;
       }
     }
 
+    // icon and notice
+    .rental_fee_variation {
+      color: #999;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      @include border-radius(25px);
+      padding: 0 2px;
+      margin-left: 5px;
+      font-size: 0.8em;
 
+      i {
+        vertical-align: middle;
+      }
+    }
+
+    .list_loading_notice {
+      background-color: #eee;
+      height: 30px;
+      padding: 5px 0;
+      img {
+        width: 20px;
+        margin-left: 15px;
+      }
+
+    }
 
   }
 
@@ -636,31 +689,32 @@ $include-html-funsha-classes: true !default;
   /*header nav and footer - ends*/
 
   /*main page general error - starts*/
-  #main_error_container {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    padding: 10px;
-    background: #C60F13;
-    color: #fff;
-    font-weight: bold;
-  }
+  // #main_error_container {
+  //   position: fixed;
+  //   left: 0;
+  //   top: 0;
+  //   z-index: 2;
+  //   width: 100%;
+  //   padding: 10px;
+  //   background: #C60F13;
+  //   color: #fff;
+  //   font-weight: bold;
+  // }
 
-  .general_error_notice .foundicon-remove {
-    font-size: 2em;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
 
-  .general_error_notice div.general_error {
-    margin-top: 5px;
-  }
+  // .general_error_notice .foundicon-remove {
+  //   font-size: 2em;
+  //   margin-right: 10px;
+  //   vertical-align: middle;
+  // }
 
-  .general_error_notice .error_list {
-    margin: 0 0 0 70px;
-  }
+  // .general_error_notice div.general_error {
+  //   margin-top: 5px;
+  // }
+
+  // .general_error_notice .error_list {
+  //   margin: 0 0 0 70px;
+  // }
 
   #main_error_spacer {
     width: 100%;
@@ -1006,11 +1060,7 @@ $include-html-funsha-classes: true !default;
   }
 
 
-  .load_more_but+img {
 
-    width: 20px;
-
-  }
 
   .empty_notice {
     color: #6f6f6f;

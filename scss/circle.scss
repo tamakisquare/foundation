@@ -5,12 +5,25 @@
 @import "compass/css3/border-radius";
 
 .invitee_notice {
-		background-color: #FFD261;
+		// background-color: #FFD261;
+		background-color: #2ba6cb;
+		color: #fff;
 		font-weight: bold;
+		height: 40px;
+		padding: 5px 0;
 		width: 100%;
+		@include box-shadow (0 2px 6px #aaa);
+
+		.join_circle {
+			margin-left: 10px;
+		}
 
 		.confirm {
 			display: none;
+
+			.action_cancel {
+				margin-left: 10px;
+			}
 		}
 }
 
@@ -32,7 +45,7 @@
 		font-size: 14px;
 	}
 
-	.edit_circle_enter, .quit_circle_enter {
+	.circle_invitation_enter, .edit_circle_enter, .resign_admin_enter, .quit_circle_enter {
 		font-size: 12px;
 		position: relative;
 		top: 14px;
@@ -95,6 +108,14 @@ li.news {
 		color: #ddd;
 	}
 
+	i.remove {
+		color: #EAB2BD;
+	}
+
+	i.icon-megaphone {
+		color: #FFD261;
+	}
+
 	.news_title {
 		line-height: 1.4;
 		margin-bottom: 10px;
@@ -107,6 +128,11 @@ li.news {
 	.feedback_rating {
 		margin: 0 5px;
 	}
+
+	.remove_reason {
+		font-size: 12px;
+	}
+
 	.comment, .announcement_detail {
 		position: relative;
 		font-size: 12px;
@@ -228,6 +254,23 @@ li.topic {
 		margin-bottom: 0;
 	}
 
+	.admin_remove_confirmation {
+		background-color: #FFD261;
+		@include border-radius(3px);
+		@include box-shadow(2px 2px 5px #ddd);
+		padding: 10px;
+
+		.remove_reason_input {
+			display: inline-block;
+			width: 400px;
+			margin-left: 10px;
+		}
+
+		.action_cancel {
+			margin-left: 10px;
+		}
+	}
+
 	.btn_section {
 		text-align: left;
 	}
@@ -253,7 +296,7 @@ li.topic {
 
 #member_section {
 	.content {
-		padding-top: 20px;
+		padding-top: 40px;
 	}
 
 	button.resign_admin_enter, button.circle_invitation_enter {
