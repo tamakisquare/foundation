@@ -116,7 +116,21 @@ $include-html-funsha-classes: true !default;
       }
 
       display: none;
+
+      .close-reveal-modal {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        color: #555;
+        text-shadow: none;
+        font-size: 1.5em;
+      }
+
+      h4 .foundicon-error {
+        color: #c60f13;
+      }
     }
+
 
     // Large Screen Styles. (The exact copy from the source)
     @media #{$small} {
@@ -608,8 +622,8 @@ $include-html-funsha-classes: true !default;
     }
 
     //disabled link
-    a.disabled {
-      color: #ccc;
+    a.disabled, a.former_user {
+      color: #aaa;
       background-color: none;
       &:hover {
         cursor: default;
